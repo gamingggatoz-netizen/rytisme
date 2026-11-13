@@ -92,9 +92,38 @@ footer{background:#272e42;padding:clamp(48px,4cqw,80px) 0 0}
 .fg p{color:var(--mute);line-height:1.5;font-size:16px;margin-bottom:20px}
 .nl{display:flex;background:#fff;color:#444;height:54px;border:1px solid #ddd}.nl span{flex:1;padding:0 16px;display:flex;align-items:center;font-size:16px}.nl b{width:48px;display:flex;align-items:center;justify-content:center;background:#eef0f5;color:#222}
 .fb{border-top:1px solid rgba(255,255,255,.08);padding:30px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--mute);font-size:16px}
+
+.card .media{aspect-ratio:16/10;padding:0;display:flex;align-items:center;justify-content:center;perspective:1000px;background:radial-gradient(circle at 50% 25%,#34457a,#121a30 75%)}
+.sc{position:relative;width:64%;height:62%;margin-top:9%;transform-style:preserve-3d;transform:rotateX(16deg) rotateY(-24deg) rotateZ(2deg);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.card:hover .sc{transform:rotateX(6deg) rotateY(-10deg) rotateZ(0)}
+.pl{position:absolute;inset:0;border-radius:12px;background:#fff;color:#111a2e;box-shadow:0 22px 44px rgba(0,0,0,.5),0 0 0 1px rgba(255,255,255,.4) inset;padding:6%;overflow:hidden}
+.pl.bk{background:#d9dcea;transform:translate3d(8%,8%,-38px);box-shadow:0 18px 36px rgba(0,0,0,.45)}
+.pl.bk2{background:#b9bfd6;transform:translate3d(16%,16%,-76px);box-shadow:0 18px 36px rgba(0,0,0,.45)}
+.fl3{position:absolute;transform-style:preserve-3d;font-weight:700;font-size:max(10px,.72cqw);white-space:nowrap}
+.pill{display:inline-flex;align-items:center;gap:5px;border-radius:99px;padding:5px 11px;color:#fff;box-shadow:0 10px 22px rgba(0,0,0,.45)}
+.pill.pk{background:var(--pink)}.pill.gn{background:#22c55e}.pill.tl{background:var(--teal);color:#06231f}
+.cc{width:clamp(34px,3.3cqw,64px);aspect-ratio:1;border-radius:50%;background:var(--pink);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:clamp(22px,2.2cqw,42px);box-shadow:0 14px 28px rgba(255,77,196,.5)}
+.vid{height:58%;border-radius:8px;background:linear-gradient(135deg,#3b2a8c,#ff4dc4);display:flex;align-items:center;justify-content:center;margin-bottom:6%}
+.vid::after{content:"";border-left:22px solid #fff;border-top:13px solid transparent;border-bottom:13px solid transparent;margin-left:6px}
+.ln{height:8px;border-radius:4px;background:#d7dae3;margin-bottom:6px}.ln.p{background:#ffb4e6}
+.wv{display:flex;align-items:flex-end;gap:3.5%;height:62%}.wv i{flex:1;border-radius:3px;background:linear-gradient(#ff4dc4,#7a2a9c)}.wv i:nth-child(3n){background:linear-gradient(#12c9b4,#1d2a8a)}
+.fr{display:flex;gap:4%;height:40%;margin-bottom:8%}.fr i{flex:1;border-radius:6px;background:linear-gradient(135deg,#1d2a8a,#7a2a9c)}.fr i:nth-child(2){background:linear-gradient(135deg,#ff4dc4,#ff9a5c)}.fr i:nth-child(3){background:linear-gradient(135deg,#12c9b4,#1e6f73)}
+.bar{height:10px;border-radius:5px;background:#e3e6ee;overflow:hidden;margin-bottom:8px}.bar b{display:block;height:100%;width:68%;background:linear-gradient(90deg,#ff4dc4,#7a2a9c)}
+.tg{display:flex;align-items:center;gap:8px;margin-bottom:8px}.tg i{width:26px;height:14px;border-radius:8px;background:#22c55e;position:relative}.tg i::after{content:"";position:absolute;right:2px;top:2px;width:10px;height:10px;border-radius:50%;background:#fff}.tg span{height:8px;flex:1;border-radius:4px;background:#d7dae3}
 @media(max-width:900px){.hero .in,.s2 .g,.s3 .g{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:1fr}nav a.l{display:none}.circles{margin-top:0}.art{margin:30px auto 0}.tc{margin-bottom:20px}}
 @media(max-width:560px){.cards{grid-template-columns:1fr}.circles{gap:8px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
+
+.btn{white-space:nowrap}
+@media(max-width:900px){
+header{height:64px}.logo{font-size:26px;padding:5px 9px 2px}nav{gap:12px}.btn.sm{height:36px;padding:0 14px;font-size:14px}
+.hero .in{padding-top:36px;padding-bottom:8px;gap:28px}.hero h1{font-size:clamp(46px,13vw,84px)}
+.circles{width:100%;max-width:420px;margin:0 auto;gap:10px;padding-bottom:0}.circles span:nth-child(n+10){display:none}
+.s1,.s2,.s3{padding-top:56px;padding-bottom:56px}.s2 .g{gap:36px}.ico{margin-bottom:20px}
+.art{max-width:420px;margin:10px auto 0}.ac{font-size:10px}.tc{height:300px;max-width:420px;margin:0 auto}
+details{padding:0 18px}summary{height:72px;font-size:16px}.fl{font-size:36px}.fg{gap:32px}.fb{flex-direction:column;gap:8px}
+.ph{padding-top:56px}.ct,.stmt{padding-left:0;padding-right:0}}
+@media(max-width:380px){.hero h1{font-size:44px}nav a.l{display:none}}
 </style></head><body><header><div class="in"><a class="logo" href="index.html">RYTISME<sup>&copy;</sup></a><nav><a class="l" href="index.html">Home</a><a class="l on" href="about.html">About Us</a><a class="l" href="index.html#services">Services</a><a class="btn sm" href="about.html#contact">Contact Us &rarr;</a></nav></div></header><main>
 <section class="ph"><div class="in"><h1>Protecting the value of<br><span class="pink">digital content.</span></h1></div></section>
 <section class="stmt"><div class="in"><p>RYTISME provides copyright protection and digital rights management solutions for music and video content owners worldwide.</p>
